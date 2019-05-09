@@ -10,11 +10,11 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane hgap="14.0" maxHeight="+Infinity" maxWidth="+Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="261.0" prefWidth="510.0" vgap="20.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eqzip.eqcoin.wallet.controller.TransferController">
+<GridPane hgap="14.0" maxHeight="+Infinity" maxWidth="+Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="261.0" prefWidth="510.0" vgap="20.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eqchains.eqzip.wallet.controller.TransferController">
 	<children>
 		<ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="TOP">
 			<image>
-				<Image url="/com/eqzip/eqcoin/wallet/resource/image/e.png" />
+				<Image url="/com/eqchains/eqzip/wallet/resource/image/e.png" />
 				<!-- place holder -->
 			</image>
 		</ImageView>
