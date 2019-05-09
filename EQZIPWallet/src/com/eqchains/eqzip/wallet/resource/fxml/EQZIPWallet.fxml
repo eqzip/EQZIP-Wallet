@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.MenuBar?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eqzip.eqcoin.wallet.controller.EQZIPWalletController">
+	<top>
+		<VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+			<children>
+				<MenuBar>
+					<menus>
+						<Menu mnemonicParsing="false" text="账户">
+							<items>
+								<MenuItem fx:id="createAccount" mnemonicParsing="false" onAction="#onCreateAccount" text="新建账户" />
+							</items>
+						</Menu>
+						<Menu mnemonicParsing="false" text="模式">
+							<items>
+								<RadioMenuItem mnemonicParsing="false" text="轻客户端" />
+								<RadioMenuItem mnemonicParsing="false" text="全节点客户端" />
+							</items>
+						</Menu>
+						<Menu mnemonicParsing="false" text="挖矿">
+							<items>
+								<MenuItem mnemonicParsing="false" onAction="#onMinering" text="开始挖矿" />
+							</items>
+						</Menu>
+						<Menu mnemonicParsing="false" text="帮助">
+							<items>
+								<MenuItem mnemonicParsing="false" text="关于" />
+								<MenuItem mnemonicParsing="false" text="检测更新..." />
+								<MenuItem mnemonicParsing="false" text="语言" />
+							</items>
+						</Menu>
+					</menus>
+				</MenuBar>
+				<AnchorPane prefHeight="200.0" prefWidth="200.0">
+					<children>
+						<HBox prefHeight="39.0" prefWidth="509.0" AnchorPane.leftAnchor="9.0" AnchorPane.topAnchor="10.0">
+							<children>
+								<Hyperlink fx:id="address" alignment="BASELINE_CENTER" focusTraversable="false">
+									<tooltip>
+										<Tooltip text="单击复制地址" />
+									</tooltip>
+									<font>
+										<Font name="Times New Roman" size="18.0" />
+									</font>
+									<HBox.margin>
+										<Insets />
+									</HBox.margin>
+								</Hyperlink>
+                        <Hyperlink fx:id="balance" alignment="BASELINE_CENTER" focusTraversable="false" onAction="#onBalance" text="0">
+                           <font>
+                              <Font name="Times New Roman" size="18.0" />
+                           </font>
+                           <tooltip>
+                              <Tooltip text="单击复制地址" />
+                           </tooltip>
+                        </Hyperlink>
+								<Label text="EQC" textFill="#bfbfbf">
+									<HBox.margin>
+										<Insets left="4.0" right="4.0" top="4.0" />
+									</HBox.margin>
+									<font>
+										<Font name="Times New Roman Bold" size="18.0" />
+									</font>
+								</Label>
+							</children>
+						</HBox>
+						<Button alignment="CENTER_RIGHT" layoutX="540.0" layoutY="2.0" mnemonicParsing="false" onAction="#onTransfer" text="转账" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="15.0" />
+					</children>
+				</AnchorPane>
+			</children>
+		</VBox>
+	</top>
+	<bottom>
+		<ToolBar nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+			<items>
+				<Label text="情商链状态" textFill="#bfbfbf" />
+				<Label text="正常" />
+				<Label text="已同步区块数" textFill="#bfbfbf" />
+				<Label text="0" />
+				<Label text="总区块数" textFill="#bfbfbf" />
+				<Label text="1234" />
+			</items>
+		</ToolBar>
+	</bottom>
+</BorderPane>
